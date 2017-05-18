@@ -1,0 +1,179 @@
+/* RESET */
+
+*,*:after,*:before{margin:0;padding:0;box-sizing:border-box;}
+img{border:0;}
+
+/* MAIN */
+
+body, html{
+    font-family: 'Catamaran', Verdana, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    -webkit-font-smoothing: antialiased;
+    background-image: url(../images/bg_icons.jpg);
+    background-attachment: fixed ;
+}
+
+/* FONTES */
+
+.catamaran_regular{ font-family: 'Catamaran', Verdana, Arial, sans-serif; font-weight: 400; }
+.catamaran_medium { font-family: 'Catamaran', Verdana, Arial, sans-serif; font-weight: 500; }
+.catamaran_bold,
+h1, h2, h3, strong{ font-family: 'Catamaran', Verdana, Arial, sans-serif; font-weight: 700; }
+.asap_regular     { font-family: 'Asap', Verdana, Arial, sans-serif; font-weight: 400; }
+.asap_medium      { font-family: 'Asap', Verdana, Arial, sans-serif; font-weight: 500; }
+
+/* CORES */
+
+::selection      { background-color: #ec5612; color: #FFF; }
+::-moz-selection { background-color: #ec5612; color: #FFF; }
+
+a{text-decoration:none;}
+a:link      { color: #FFF; }
+a:visited   { color: #FFF; }
+a:hover     { color: #FFC; }
+a:active    { color: #FFF; }
+
+.laranja    { color: #ec5612; }
+.laranja_sec{ color: #ef5544; }
+.amarelo    { color: #f2e31e; }
+.amarelo_sec{ color: #efb744; }
+.roxo       { color: #352f62; }
+.roxo_sec   { color: #634e87; }
+.roxo_claro { color: #B9ABD0; }
+.branco     { color: #f9f9f9; }
+.azul       { color: #086e9a; }
+.preto      { color: #1c1e20; }
+.verde      { color: #2ecc71; }
+
+.bg_laranja    { background-color: #ec5612; }
+.bg_laranja_sec{ background-color: #ef5544; }
+.bg_amarelo    { background-color: #f2e31e; }
+.bg_amarelo_sec{ background-color: #efb744; }
+.bg_roxo       { background-color: #352f62; }
+.bg_roxo_sec   { background-color: #634e87; }
+.bg_branco     { background-color: #f9f9f9; }
+.bg_azul       { background-color: #086e9a; }
+.bg_preto      { background-color: #1c1e20; }
+.bg_verde      { background-color: #2ecc71; }
+
+/* ELEMENTOS */
+
+button{
+    -webkit-transition: all 400ms cubic-bezier(.31, .19, .16, 1);
+    -moz-transition: all 400ms cubic-bezier(.31, .19, .16, 1);
+    -ms-transition: all 400ms cubic-bezier(.31, .19, .16, 1);
+    -o-transition: all 400ms cubic-bezier(.31, .19, .16, 1);
+    transition: all 400ms cubic-bezier(.31, .19, .16, 1);
+}
+
+/* CLASSES E IDS */
+
+.navbar-inverse{
+    background-color: rgba(140,208,202,0.9);
+}
+
+.no_padding{ padding: 0 }
+
+.delay1{ -webkit-animation-delay: 1s; }
+.delay2{ -webkit-animation-delay: 2s; }
+
+.spaced      { padding-top: 80px;padding-bottom: 80px; }
+.low_spaced  { padding: 50px 0 20px 0 }
+.v_low_spaced{ padding: 15px 0 }
+
+.full{
+    position: relative;
+    width: 100%;
+}
+
+.logo > img{
+    max-width: 350px;
+    margin: 30px 0;
+    pointer-events: none;
+}
+
+a.navbar-brand > img.logo{ max-height: 100%; }
+
+#banner{
+    position: relative;
+    padding-top: 100px;
+    background-color: #8cd0ca;
+    background-image: url(../images/city.png);
+    /*background-size: cover;*/
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    height: 700px;
+}
+
+footer .logo{ max-width: 230px }
+footer .medias{ padding-top: 150px; }
+footer .footer_right{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    display: table;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* SPRITES */
+
+.sprite {
+    background-image: url(../images/spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+    display: inline-block;
+}
+
+.sprite-app_store_icon {
+    width: 109px;
+    height: 37px;
+    background-position: -5px -5px;
+}
+
+.sprite-google_play_icon {
+    width: 131px;
+    height: 39px;
+    background-position: -5px -146px;
+}
+
+.sprite-check_icon{
+    padding-left: 50px;
+}
+
+.sprite-check_icon:after {
+    content: '';
+    position: absolute;
+    left: 15px; top: 25px;
+    width: 40px;
+    height: 28px;
+    background-position: -75px -2px;
+    background-repeat: no-repeat;
+    background-size: auto 120px;
+    overflow: hidden;
+    z-index: 0;
+    background-image: url(../images/spritesheet.png);
+}
+
+.sprite-checklist_icon {
+    width: 60px;
+    height: 81px;
+    background-position: -5px -55px;
+}
+
+.sprite-clock_icon {
+    width: 82px;
+    height: 81px;
+    background-position: -75px -55px;
+}
+
+.sprite-money_icon {
+    width: 100px;
+    height: 65px;
+    background-position: -188px -5px;
+    margin-top: 15px
+}
