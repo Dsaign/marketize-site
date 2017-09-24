@@ -589,7 +589,7 @@
 @keyframes fadeInDownBig {
   from {
     opacity: 0;
-    transform: translate3d(0, -2000px, 0);
+    transform: translate3d(0, -100%, 0);
   }
 
   to {
@@ -685,7 +685,7 @@
 @keyframes fadeInUpBig {
   from {
     opacity: 0;
-    transform: translate3d(0, 2000px, 0);
+    transform: translate3d(0, 100%, 0);
   }
 
   to {

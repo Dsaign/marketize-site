@@ -24,6 +24,9 @@ body,
     background-size: cover;
     background-position: center;
 }
+h1.grande{
+    letter-spacing: -1px;
+}
 
 .wrapper_landing{
     position: absolute;
@@ -70,6 +73,8 @@ body,
     height: 15px;
     margin: 8px 12px;
     cursor: pointer;
+    -webkit-box-shadow: 0 0 5px 1px rgba(0,0,0,0.2);
+    box-shadow: 0 0 5px 1px rgba(0,0,0,0.2);
 }
 
 .ajust_top{
@@ -87,10 +92,19 @@ body,
     position: absolute;
     width: 50%;
     height: auto;
-    top:25%;
+    top: 50%;
     background-color: rgba(115,44,39,0.4);
     padding: 40px 40px 40px 10%;
 }
+
+.center_vertical{
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
 #landing2 > div{
     height: 100%;
     top: 0;
@@ -152,6 +166,22 @@ body,
 .landing1{ background-image: url(../images/bg.jpg) }
 .landing2{ background-image: none; }
 .landing3{ background-image: url(../images/bg3.jpg) }
+
+#landing3 > div{
+    width: 100%;
+    background-color: rgba(241,241,241,1);
+}
+#landing3 .metade{
+    width: 45%;
+}
+#landing3 .cellphone{
+    position: absolute;
+    width: 50%;
+    right:0;
+    text-align: left;
+    padding-left: 10%;
+    top: 50%;
+}
 
 footer{
     position: absolute;
@@ -331,11 +361,21 @@ div.slick{
         font-size: 44px;
         line-height: 44px;
     }
+    #landing3 .cellphone img{
+        width: 230px;
+    }
 }
 
 @media (max-width: 900px){
     #landing1 > div{
         position: relative;
+        text-align: center;
+        width: 100%;
+    }
+    #landing3 .cellphone{
+        display: none;
+    }
+    #landing3 .metade{
         text-align: center;
         width: 100%;
     }
@@ -369,9 +409,12 @@ div.slick{
         margin: 8px;
     }
     #landing1 > div{
-        top:0;
         padding: 30px 20px;
-        top:15%;
+        top:0;
+        height: 100%;
+    }
+    .ajust_top{
+        top: 5px;
     }
     h1.grande{
         font-size: 34px;
@@ -379,11 +422,36 @@ div.slick{
     }
     #landing2 .metade{
         width: 100%;
+        text-align: center;
     }
     #landing2 .metade .metade_baixo h1{
         font-size: 20px;
     }
     #landing2 .metade .metade_baixo h1 br{
         display: none;
+    }
+    #landing2 .metade_cima{
+        height: 40%;
+    }
+    #landing2 .metade_baixo,
+    #landing2 .gradient{
+        height: 60% !important;
+    }
+    #landing3 h1 br{
+        display: none;
+    }
+    .center_vertical{
+        -moz-transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -o-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+    #landing2 .metade_cima > div{
+        width: 100%;
+    }
+    #landing3 > div{
+        top: 10%;
+        padding: 30px;
     }
 }

@@ -64,3 +64,16 @@ a.branco{ color: white; }
 .botao_login{
 	margin-top: 30px;
 }
+
+footer{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 5px 0;
+    bottom: 0;
+    left: 0;
+    font-size: 12px;
+    font-weight: 700;
+    color: #9B9B9B;
+}

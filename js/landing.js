@@ -92,6 +92,25 @@
 	    }
 	});
 
+	$("#saiba_mais1").on("click", function(e){
+		e.preventDefault();
+		goTo(1,2,"down");
+	});
+	$("#saiba_mais2").on("click", function(e){
+		e.preventDefault();
+		goTo(2,3,"down");
+	});
+
 	createDots();
+
+	// remove anim starter da #landing1
+	var classesToRemove = "animated fadeInLeft fadeInDownBig fadeInUpBig fadeInRight";
+	if(window.outerWidth < 600){
+		$(".only_start").removeClass(classesToRemove);
+	} else{
+		setTimeout(function(){
+			$(".only_start").removeClass(classesToRemove);
+		}, 1000);
+	}
 
 })();

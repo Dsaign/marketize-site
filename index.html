@@ -18,7 +18,7 @@
 
 <body class="no_overflow">
 
-	<div class="full menu">
+	<div class="full menu animated fadeInDownBig only_start">
         <div class="gradient"></div>
 		<div class="container_small no_padding">
 			<div class="col col_media inline_block">
@@ -32,18 +32,20 @@
 	</div>
 
     <!-- *********** LANDING *********** -->
-    <div id="landing" class="wrapper_landing">
+    <div id="landing" class="wrapper_landing animated fadeIn only_start">
 
-        <div id="dots"><div></div></div>
+        <div id="dots" class="animated fadeInRight only_start"><div></div></div>
 
         <!-- *********** LANDING 1 *********** -->
         <section id="landing1" class="animated landing landing1">
-            <div class="text-right branco">
-                <h1 class="branco grande fino">Faça suas<br />compras sem<br />sair de casa</h1>
+            <div class="text-right branco center_vertical">
+                <h1 class="branco grande animated fadeInLeft only_start">Faça suas<br />compras sem<br />sair de casa</h1>
                 <br />
-                <h1 class="fino">
+                <h1 class="fino animated fadeInLeft only_start">
                     <div class="ajust_top">Com o app </div>
                     <img class="logo" src="images/logo_orange.png" alt="marketize" width="170px" />
+                    <br /><br />
+                    <button id="saiba_mais1" type="button" class="button btn-primary"><span></span>Saiba mais</button>
                 </h1>
             </div>
         </section>
@@ -56,13 +58,15 @@
                 <div class="texto">
                     <div class="metade_cima">
                         <div>
-                            <h1 class="grande">O app ideal<br />para a sua<br />rotina mensal</h1>
+                            <h1 class="grande">O <strong class="laranja">app ideal</strong><br />para a sua<br />rotina mensal</h1>
                         </div>
                     </div>
                     <div class="metade_baixo">
                         <h1 class="fino branco">
                             Crie sua lista de compras<br /> de maneira fácil e prática.
                         </h1>
+                        <br />
+                        <button id="saiba_mais2" type="button" class="button btn-success">Ver mais</button>
                     </div>
                 </div>
             </div>
@@ -70,18 +74,20 @@
 
         <!-- *********** LANDING 3 *********** -->
         <section id="landing3" class="animated landing landing3 invisible">
-            <div class="text-right branco">
-                <h1 class="branco grande fino">Faça suas<br />compras sem<br />sair de casa</h1>
-                <br />
-                <h1 class="fino">
-                    <div class="ajust_top">Com o app </div>
-                    <img class="logo" src="images/logo_orange.png" alt="marketize" width="170px" />
-                </h1>
+            <div class="text-right full branco center_vertical">
+                <div class="metade">
+                    <h1 class="grande preto">Conheça o app<br /> agora e começe<br /> suas compras!</h1>
+                    <br />
+                    <button id="saiba_mais3" type="button" class="button btn-primary"><span></span>Acesse</button>
+                </div>
+                <div class="cellphone center_vertical">
+                    <img src="images/cellphone.png" width="280px" alt="app" />
+                </div>
             </div>
         </section>
     </div>
 
-    <footer>© Marketize - 2017</footer>
+    <footer class="animated fadeInUpBig only_start">© Marketize - 2017</footer>
 
     <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
