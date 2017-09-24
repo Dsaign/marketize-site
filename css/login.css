@@ -1,0 +1,66 @@
+body{
+	background-image: url(../images/bg_login.jpg);
+	background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+
+a.branco{ color: white; }
+
+.wrap_login{
+	position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 0;
+    top: 0;
+    left: 0;
+    display: table;
+}
+
+#login{
+    text-align: center;
+	vertical-align: middle;
+    position: relative;
+    display: table-cell;
+    width: 200px;
+    height: auto;
+    overflow: visible;
+}
+
+#login .container_login{
+	color: #3D3D3D;
+	position: relative;
+    padding: 100px 20px 10px 20px;
+	width: 400px;
+	display: inline-block;
+	background-color: #EEEEEE;
+}
+
+#login .gradient{
+    background: #ef4547;
+    background: -moz-linear-gradient(left,  #ef4547 0%, #f9843b 70%);
+    background: -webkit-linear-gradient(left,  #ef4547 0%,#f9843b 70%);
+    background: linear-gradient(to right,  #ef4547 0%,#f9843b 70%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ef4547', endColorstr='#f9843b',GradientType=1 );
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top:0; left:0;
+    margin-bottom: 30px;
+    padding: 10px;
+    color: white;
+}
+.senha{
+	position: relative;
+	text-align: center;
+	font-weight: 700;
+	top: 40px;
+}
+.botao_login{
+	margin-top: 30px;
+}
