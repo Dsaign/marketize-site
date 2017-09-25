@@ -1,5 +1,6 @@
 /*body, html,*/
-.menu .gradient{
+.menu .gradient,
+#landing2 .gradient{
     background: #ef4547;
     background: -moz-linear-gradient(left,  #ef4547 0%, #f9843b 70%);
     background: -webkit-linear-gradient(left,  #ef4547 0%,#f9843b 70%);
@@ -22,6 +23,9 @@ body,
     -o-background-size: cover;
     background-size: cover;
     background-position: center;
+}
+h1.grande{
+    letter-spacing: -1px;
 }
 
 .wrapper_landing{
@@ -47,24 +51,30 @@ body,
     position: absolute;
     width: 40px;
     height: 200px;
-    line-height: 200px;
+    line-height: 0;
     margin-top: -60px;
     top: 50%;
     right: 40px;
     z-index: 10;
+    display: table;
 }
 #landing #dots > div{
+    vertical-align: middle;
     position: relative;
-    display: inline-block;
+    display: table-cell;
     width: 100%;
     height: auto;
 }
 #landing #dots .dot{
     position: relative;
     border-radius: 50%;
+    display: inline-block;
     width: 15px;
     height: 15px;
-    margin: 12px;
+    margin: 8px 12px;
+    cursor: pointer;
+    -webkit-box-shadow: 0 0 5px 1px rgba(0,0,0,0.2);
+    box-shadow: 0 0 5px 1px rgba(0,0,0,0.2);
 }
 
 .ajust_top{
@@ -82,14 +92,96 @@ body,
     position: absolute;
     width: 50%;
     height: auto;
-    top:30%;
+    top: 50%;
     background-color: rgba(115,44,39,0.4);
     padding: 40px 40px 40px 10%;
 }
 
+.center_vertical{
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+#landing2 > div{
+    height: 100%;
+    top: 0;
+    padding-top: 20%;
+}
+#landing2{
+    background-size: contain;
+    background-position: right 100%;
+}
+#landing2 .bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/bg4.jpg);
+    background-position: right top;
+}
+#landing2 .metade{
+    background-color: #F1F1F1;
+    color: #3D3D3D;
+}
+
+#landing2 .gradient{
+    bottom:0;
+    top: unset !important;
+    height: 50% !important;
+    z-index: 1;
+}
+#landing2 .texto{
+    z-index: 5;
+    position: relative;
+    height: 100%;
+}
+#landing2 .metade_cima,
+#landing2 .metade_baixo{
+    position: absolute;
+    height: 50%;
+    width: 100%;
+}
+#landing2 .metade_cima,
+#landing2 .metade_baixo,
+#landing2 .metade_cima > div{
+    padding: 20px;
+}
+
+#landing2 .metade_cima{
+    top:0;
+}
+#landing2 .metade_cima > div{
+    position: absolute;
+    width: auto;
+    height: auto;
+    bottom: 0;
+    right: 0;
+}
+#landing2 .metade_baixo{
+    bottom:0;
+}
+
 .landing1{ background-image: url(../images/bg.jpg) }
-.landing2{ background-image: url(../images/bg2.jpg) }
+.landing2{ background-image: none; }
 .landing3{ background-image: url(../images/bg3.jpg) }
+
+#landing3 > div{
+    width: 100%;
+    background-color: rgba(241,241,241,1);
+}
+#landing3 .metade{
+    width: 45%;
+}
+#landing3 .cellphone{
+    position: absolute;
+    width: 50%;
+    right:0;
+    text-align: left;
+    padding-left: 10%;
+    top: 50%;
+}
 
 footer{
     position: absolute;
@@ -111,7 +203,8 @@ footer{
     -webkit-box-shadow: 0 1px 3px 1px rgba(0,0,0,0.1);
     box-shadow: 0 1px 3px 1px rgba(0,0,0,0.1);
 }
-.menu .gradient{
+.menu .gradient,
+#landing2 .gradient{
     position: absolute;
     width: 100%;
     height: 4px;
@@ -261,4 +354,104 @@ span.desc{
 
 div.slick{
     padding-bottom: 30px;
+}
+
+@media (max-width: 1200px){
+    h1.grande{
+        font-size: 44px;
+        line-height: 44px;
+    }
+    #landing3 .cellphone img{
+        width: 230px;
+    }
+}
+
+@media (max-width: 900px){
+    #landing1 > div{
+        position: relative;
+        text-align: center;
+        width: 100%;
+    }
+    #landing3 .cellphone{
+        display: none;
+    }
+    #landing3 .metade{
+        text-align: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px){
+    .menu .container_small .col{
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .menu .container_small .col .logo{
+        width: 130px;
+    }
+    .menu .container_small .botoes_menu{
+        padding: 0;
+    }
+    .landing{
+        top: 135px;
+    }
+    #landing #dots{
+        bottom:40px;
+        left:30px;
+        right: 30px;
+        top:unset;
+        width: 82%;
+        text-align: center;
+        height: 30px;
+    }
+    #landing #dots .dot{
+        margin: 8px;
+    }
+    #landing1 > div{
+        padding: 30px 20px;
+        top:0;
+        height: 100%;
+    }
+    .ajust_top{
+        top: 5px;
+    }
+    h1.grande{
+        font-size: 34px;
+        line-height: 34px;
+    }
+    #landing2 .metade{
+        width: 100%;
+        text-align: center;
+    }
+    #landing2 .metade .metade_baixo h1{
+        font-size: 20px;
+    }
+    #landing2 .metade .metade_baixo h1 br{
+        display: none;
+    }
+    #landing2 .metade_cima{
+        height: 40%;
+    }
+    #landing2 .metade_baixo,
+    #landing2 .gradient{
+        height: 60% !important;
+    }
+    #landing3 h1 br{
+        display: none;
+    }
+    .center_vertical{
+        -moz-transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -o-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+    #landing2 .metade_cima > div{
+        width: 100%;
+    }
+    #landing3 > div{
+        top: 10%;
+        padding: 30px;
+    }
 }

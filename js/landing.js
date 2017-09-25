@@ -6,7 +6,7 @@
 	window.dots_count     = $("#landing .landing").length;
 	window.$dots 		  = $("#landing #dots > div");
 
-	function goTo(actual, next, dir){
+	window.goTo = function(actual, next, dir, dot){
 
 		var $actual = $(".landing" + actual);
 		var $next   = $(".landing" + next);
@@ -30,14 +30,35 @@
 		} else if(next == 3 && dir == "up"){
 			actual_slide = 3;
 		} else {
-			if(dir == "down"){
-				actual_slide++;
+			if(dot){
+				actual_slide = next;
 			} else {
-				actual_slide--;
+				if(dir == "down"){
+					actual_slide++;
+				} else {
+					actual_slide--;
+				}
 			}
 		}
 
 		setActiveDot(actual_slide);
+	}
+
+	function setDotEvent(){
+		$dots.find(".dot").on("click", function(){
+			if(!flag_animating){
+				flag_animating = true;
+				var tgt    = parseInt($(this).attr("data-go"));
+				var actual = actual_slide;
+				var dir    = "";
+
+				if(tgt == actual){ return false }
+
+				tgt > actual ? dir = "down" : dir = "up";
+
+				goTo(actual, tgt, dir, true);
+			}
+		});
 	}
 
 	function setActiveDot(num){
@@ -47,8 +68,9 @@
 
 	function createDots(){
 		for (var i = 0; i < dots_count; i++){
-			$dots.append("<div class='dot dot" + (i+1) + "'></div>");
+			$dots.append("<div class='dot dot" + (i+1) + "' data-go='" + (i+1) + "'></div>");
 		}
+		setDotEvent();
 		setActiveDot(1);
 	}
 
@@ -70,6 +92,25 @@
 	    }
 	});
 
+	$("#saiba_mais1").on("click", function(e){
+		e.preventDefault();
+		goTo(1,2,"down");
+	});
+	$("#saiba_mais2").on("click", function(e){
+		e.preventDefault();
+		goTo(2,3,"down");
+	});
+
 	createDots();
+
+	// remove anim starter da #landing1
+	var classesToRemove = "animated fadeInLeft fadeInDownBig fadeInUpBig fadeInRight";
+	if(window.outerWidth < 600){
+		$(".only_start").removeClass(classesToRemove);
+	} else{
+		setTimeout(function(){
+			$(".only_start").removeClass(classesToRemove);
+		}, 1000);
+	}
 
 })();
