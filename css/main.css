@@ -1,7 +1,7 @@
 /* RESET */
 
 *,*:after,*:before{margin:0;padding:0;box-sizing:border-box;}
-img{border:0;}
+img{border:0;user-select: none;pointer-events: none}
 :focus{outline: none;}
 
 /* MAIN */
@@ -33,11 +33,21 @@ h1.grande{ font-size: 55px; line-height: 55px; }
 ::selection      { background-color: #FF5A4E; color: #FFF; }
 ::-moz-selection { background-color: #FF5A4E; color: #FFF; }
 
-a           { text-decoration:none; }
-a:link      { color: #383838; }
-a:visited   { color: #383838; }
-a:hover     { color: #4D4D4D; }
-a:active    { color: #383838; }
+a          { text-decoration:none; }
+a:link     { color: #383838; }
+a:visited  { color: #383838; }
+a:hover    { color: #5A5A5A; }
+a:active   { color: #383838; }
+
+a.button:hover   { color: #FFFFFF; }
+a.button:link    { color: #FFFFFF; }
+a.button:visited { color: #FFFFFF; }
+a.button:active  { color: #FFFFFF; }
+
+a.btn-warning:hover   { color: #FF4335; }
+a.btn-warning:link    { color: #FF4335; }
+a.btn-warning:visited { color: #FF4335; }
+a.btn-warning:active  { color: #FF4335; }
 
 .laranja    { color: #FF4335; }
 .laranja_sec{ color: #ef5544; }
@@ -62,7 +72,7 @@ a:active    { color: #383838; }
 .bg_preto      { background-color: #3D3D3D; }
 .bg_verde      { background-color: #2ecc71; }
 
-.invisible{ display: none; }
+.invisible{ display: none !important; }
 .no_overflow{ overflow: hidden; }
 
 /* ESTRUTURA */
@@ -118,6 +128,7 @@ hr{
 }
 
 .no_padding{ padding: 0 !important }
+.no_margin{ margin: 0 !important }
 
 .container{ padding: 50px; max-width:1000px;margin: 0 auto;  }
 .container_small{ padding: 10px; max-width:1000px;margin: 0 auto;  }
@@ -125,7 +136,7 @@ hr{
 
 .spaced      { padding-top: 80px;padding-bottom: 80px; }
 .low_spaced  { padding: 50px 0 20px 0 }
-.v_low_spaced{ padding: 15px 0 }
+.v_low_spaced{ padding: 5px 0 }
 
 .full{
     position: relative;
@@ -134,37 +145,43 @@ hr{
 
 /* INPUT */
 
-input[type="text"]::-webkit-input-placeholder{ color: #d8d8d8 }
-input[type="text"]::-moz-placeholder{ color: #d8d8d8 }
-input[type="text"]:-ms-input-placeholder{ color: #d8d8d8 }
-input[type="text"]:-moz-placeholder{ color: #d8d8d8 }
-input[type="text"]:placeholder { color: #d8d8d8 }
+input[type="text"]::-webkit-input-placeholder{ color: #9E9E9E }
+input[type="text"]::-moz-placeholder{ color: #9E9E9E }
+input[type="text"]:-ms-input-placeholder{ color: #9E9E9E }
+input[type="text"]:-moz-placeholder{ color: #9E9E9E }
+input[type="text"]:placeholder { color: #9E9E9E }
 
-input[type="password"]::-webkit-input-placeholder{ color: #d8d8d8 }
-input[type="password"]::-moz-placeholder{ color: #d8d8d8 }
-input[type="password"]:-ms-input-placeholder{ color: #d8d8d8 }
-input[type="password"]:-moz-placeholder{ color: #d8d8d8 }
-input[type="password"]:placeholder { color: #d8d8d8 }
+input[type="password"]::-webkit-input-placeholder{ color: #9E9E9E }
+input[type="password"]::-moz-placeholder{ color: #9E9E9E }
+input[type="password"]:-ms-input-placeholder{ color: #9E9E9E }
+input[type="password"]:-moz-placeholder{ color: #9E9E9E }
+input[type="password"]:placeholder { color: #9E9E9E }
 
-input[type="email"]::-webkit-input-placeholder{ color: #d8d8d8 }
-input[type="email"]::-moz-placeholder{ color: #d8d8d8 }
-input[type="email"]:-ms-input-placeholder{ color: #d8d8d8 }
-input[type="email"]:-moz-placeholder{ color: #d8d8d8 }
-input[type="email"]:placeholder { color: #d8d8d8 }
+input[type="email"]::-webkit-input-placeholder{ color: #9E9E9E }
+input[type="email"]::-moz-placeholder{ color: #9E9E9E }
+input[type="email"]:-ms-input-placeholder{ color: #9E9E9E }
+input[type="email"]:-moz-placeholder{ color: #9E9E9E }
+input[type="email"]:placeholder { color: #9E9E9E }
 
 input[type="text"],
 input[type="password"],
-input[type="email"]{
+input[type="email"],
+input[type="date"],
+select{
     font-size: 16px;
-    color: #FFF;
+    color: #4D4D4D;
     width: 100%;
     box-sizing: border-box;
     background: transparent;
 }
+
+input[type="date"]{
+    padding: 7px 8px;
+}
 .line_effect{
     border: 0;
     padding: 10px 8px;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(0,0,0,0.2);
 }
 .line_effect:focus{
     padding-left: 12px;
@@ -199,7 +216,6 @@ input[type="email"]{
 .button {
     display: inline-block;
     min-width: 100px;
-    max-width: 250px;
     padding: 10px 30px;
     border: none;
     background: none;
@@ -358,4 +374,12 @@ input[type="email"]{
 }
 .control-radio input:disabled ~ .control_indicator:after {
     background: #7b7b7b;
+}
+
+/* SELECT */
+
+select{
+    margin:0;padding:0;
+    border:0;
+    width: 100%;
 }

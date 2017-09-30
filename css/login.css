@@ -1,5 +1,5 @@
 body{
-	background-image: url(../images/bg_login.jpg);
+	background-image: url(../images/bg2_escuro.jpg);
 	background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -8,61 +8,111 @@ body{
     background-position: center;
 }
 
-a.branco{ color: white; }
+.animated{
+    animation-duration: 400ms;
+}
+
+.animated2{
+    animation-duration: 1000ms;
+    animation-delay: 200ms;
+}
 
 .wrap_login{
-	position: absolute;
+    position: relative;
+    height: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.delay1{
+    animation-delay: 600ms;
+}
+
+h1.grande{
+    font-size: 40px;
+    line-height: 45px;
+}
+
+.metade{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+    max-width: 700px;
+}
+
+.metade .inner{
+    position: relative;
     width: 100%;
     height: 100%;
-    line-height: 0;
-    top: 0;
-    left: 0;
     display: table;
-}
-
-#login{
     text-align: center;
-	vertical-align: middle;
+    padding: 80px;
+}
+
+.metade .inner .content{
     position: relative;
-    display: table-cell;
-    width: 200px;
-    height: auto;
-    overflow: visible;
-}
-
-#login .container_login{
-	color: #3D3D3D;
-	position: relative;
-    padding: 100px 20px 10px 20px;
-	width: 400px;
-	display: inline-block;
-	background-color: #EEEEEE;
-}
-
-#login .gradient{
-    background: #ef4547;
-    background: -moz-linear-gradient(left,  #ef4547 0%, #f9843b 70%);
-    background: -webkit-linear-gradient(left,  #ef4547 0%,#f9843b 70%);
-    background: linear-gradient(to right,  #ef4547 0%,#f9843b 70%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ef4547', endColorstr='#f9843b',GradientType=1 );
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    position: absolute;
     width: 100%;
     height: auto;
-    top:0; left:0;
-    margin-bottom: 30px;
-    padding: 10px;
-    color: white;
+    display: table-cell;
+    vertical-align: middle;
 }
-.senha{
-	position: relative;
-	text-align: center;
-	font-weight: 700;
-	top: 40px;
+
+.metade .inner .content.login,
+.metade .inner .content.cadastro{
+    height: auto;
+    padding: 0 50px;
 }
-.botao_login{
-	margin-top: 30px;
+
+.metade .inner .content.login .logo{
+    margin-bottom: 60px;
+}
+
+.metade .inner .content.cadastro .logo{
+    margin-bottom: 40px;
+}
+
+.metade .inner .content.cadastro #btn_cadastro{
+    margin-top: 40px;
+}
+
+.metade .inner .content.login .esqueci_senha{
+    position: relative;
+    display: inline-block;
+    margin: 60px 0 30px 0;
+}
+
+.metade #tabs{
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    background-color: #ddd;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+.metade #tabs .tab{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    font-size: 18px;
+    line-height: 80px;
+    display: inline-block;
+    white-space: normal;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.metade #tabs .tab:not(.active):hover{
+    opacity: 0.7;
+}
+
+.metade #tabs .tab.active{
+    background-color: #f9f9f9;
+    font-weight: 700;
 }
 
 footer{

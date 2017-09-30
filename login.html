@@ -14,45 +14,107 @@
     <link rel="stylesheet" type="text/css" href="css/login.css" />
 </head>
 
-<body>
+<body class="no_overflow">
     
     <div class="wrap_login">
-        <div id="login" class="branco">
-            <div class="container_login animated fadeInDown">
-                <div class="gradient">
-                    <h1 class="title"><img src="images/logo.png" width="130px" alt="marketize"></h1>
-                </div>
-                <div class="full">
-                    <div class="col inline_block">
-                        <div>
-                            <input type="text" name="" value="" class="line_effect" placeholder="Nome">
-                            <span class="focus-border"></span>
-                        </div>
-                    </div>
-                    <div class="col inline_block">
-                        <div>
-                            <input type="text" name="" value="" class="line_effect" placeholder="E-mail">
-                            <span class="focus-border"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center botao_login">
-                    <button id="btn_login" class="button btn-primary branco"><span></span>Login</button><br />
-                </div>
-                <div class="senha">
-                    <a href="#" class="branco">esqueci a senha</a>
+        <div class="metade">
+            <div class="inner">
+                <div class="content branco">
+                    <h1 class="grande animated fadeInLeft animated2 delay1">A maneira mais fácil de organizar suas compras.</h1>
                 </div>
             </div>
+        </div><!--
+     --><div class="metade bg_branco no_overflow animated animated2 fadeInLeft">
+            <div id="tabs">
+                <div class="tab active" data-goto="login">Login</div>
+                <div class="tab" data-goto="cadastro">Cadastre-se</div>
+            </div>
+            <div class="inner">
+
+                <!-- ************ TAB 1 ************ -->
+                <div id="login" class="content login">
+                    <img src="images/logo_orange.png" width="270px" alt="Marketize" class="logo">
+
+                    <div class="fb-login-button" data-max-rows="1" data-size="medium" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
+        
+                    <div class="col inline_block v_low_spaced">
+                        <div>
+                            <input type="email" name="" value="" class="line_effect text-center" placeholder="Login">
+                            <span class="focus-border"></span>
+                        </div>
+                    </div><!--
+                 --><div class="col inline_block v_low_spaced">
+                        <div>
+                            <input type="password" name="" value="" class="line_effect text-center" placeholder="Senha">
+                            <span class="focus-border"></span>
+                        </div>
+                    </div>
+                    
+                    <a href="" class="esqueci_senha">Esqueci minha senha</a>
+
+                    <button type="button" class="button btn-primary full no_margin"><span></span>Entrar</button>
+
+                </div>
+
+                <!-- ************ TAB 2 ************ -->
+                <div id="cadastro" class="content cadastro invisible">
+                    <img src="images/logo_orange.png" width="270px" alt="Marketize" class="logo">
+
+                    <form method="POST" action="/" id="form_cadastro" name="form_cadastro">
+                        <div class="col inline_block v_low_spaced">
+                            <div>
+                                <input type="text" name="" value="" class="line_effect" placeholder="Nome completo" required>
+                                <span class="focus-border"></span>
+                            </div>
+                        </div><!--
+                     --><div class="col inline_block v_low_spaced">
+                            <div>
+                                <input type="email" name="" value="" class="line_effect" placeholder="E-mail" required>
+                                <span class="focus-border"></span>
+                            </div>
+                        </div><!--
+                     --><div class="col inline_block v_low_spaced">
+                            <div>
+                                <input type="password" name="" value="" class="line_effect" placeholder="Senha" required>
+                                <span class="focus-border"></span>
+                            </div>
+                        </div><!--
+                     --><div class="col inline_block v_low_spaced">
+                            <div>
+                                <input type="password" name="" value="" class="line_effect" placeholder="Confirmar senha" required>
+                                <span class="focus-border"></span>
+                            </div>
+                        </div><!--
+                     --><div class="col inline_block col_media v_low_spaced">
+                            <div style="width:95%">
+                                <input type="date" name="" value="" class="line_effect" placeholder="Data de nascimento" required>
+                                <span class="focus-border"></span>
+                            </div>
+                        </div><!--
+                     --><div class="col inline_block col_media v_low_spaced text-right">
+                            <div>
+                                <select id="sexo" name="sexo" class="line_effect">
+                                    <option value="0" class="invisible">Sexo</option>
+                                    <option value="M">Masculino</option>
+                                    <option value="F">Feminino</option>
+                                </select>
+                                <span class="focus-border"></span>
+                            </div>
+                        </div>
+
+                        <input id="btn_cadastro" name="btn_cadastro" type="submit" value="Concluir" class="button btn-primary full"><span></span></input>
+                    
+                    </form>
+                </div>
+            </div>
+            <footer>© Marketize - 2017</footer>
         </div>
     </div>
-
-
-    <footer>© Marketize - 2017</footer>
 
     <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="js/landing.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
 
 </body>
 </html>
