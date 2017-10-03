@@ -1,0 +1,227 @@
+body, html{
+	background-image: none;
+}
+
+#master_wrapper .gradient{
+    background: #ef4547;
+    background: -moz-linear-gradient(left,  #ef4547 0%, #f9843b 70%);
+    background: -webkit-linear-gradient(left,  #ef4547 0%,#f9843b 70%);
+    background: linear-gradient(to right,  #ef4547 0%,#f9843b 70%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ef4547', endColorstr='#f9843b',GradientType=1 );
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    top:0; left:0;
+    z-index: 4;
+}
+
+#menu li,
+#master_header #config{
+    -webkit-transition: opacity 400ms cubic-bezier(.31, .19, .16, 1),
+        background-color 400ms cubic-bezier(.31, .19, .16, 1);
+    -moz-transition: opacity 400ms cubic-bezier(.31, .19, .16, 1),
+        background-color 400ms cubic-bezier(.31, .19, .16, 1);
+    -ms-transition: opacity 400ms cubic-bezier(.31, .19, .16, 1),
+        background-color 400ms cubic-bezier(.31, .19, .16, 1);
+    -o-transition: opacity 400ms cubic-bezier(.31, .19, .16, 1),
+        background-color 400ms cubic-bezier(.31, .19, .16, 1);
+    transition: opacity 400ms cubic-bezier(.31, .19, .16, 1),
+        background-color 400ms cubic-bezier(.31, .19, .16, 1);
+}
+
+#master_wrapper,
+#master_header,
+#master_side,
+#master_content{
+	position: absolute;
+	z-index: 2;
+}
+
+#master_side,
+#master_header{
+	top:4px;
+	-webkit-box-shadow: 0 0 5px 1px rgba(0,0,0,0.2);
+    box-shadow: 0 0 5px 1px rgba(0,0,0,0.2);
+}
+
+#master_wrapper{
+	position: relative;
+	height: 100%;
+}
+#master_header{
+	height: 80px;
+	left:0;
+	padding:25px;
+	padding-left:100px;
+	background-color: #F1F1F1;
+	overflow: hidden;
+}
+#master_header img{
+	width: 200px;
+	height: auto;
+}
+#master_header #config{
+	position: absolute;
+	width: 80px;
+	height: 80px;
+	right: 0;
+	top:0;
+	overflow: hidden;
+	background-color: #E8E8E8;
+	cursor: pointer;
+	text-align: center;
+}
+#master_header #config img{
+	top:-66px;
+	left:0;
+}
+
+#master_side{
+	left:0;
+	width: 80px;
+	height: 100%;
+	z-index: 3;
+	background-color: #FFF;
+}
+#menu{
+	list-style: none;
+	line-height: 8px;
+	overflow: hidden;
+}
+#menu li{
+	position: relative;
+	margin: 0;
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+	fill: #eee;
+	overflow: hidden;
+	border-top: 2px solid #ddd;
+	background-color: #FFFFFF;
+	text-align: center;
+}
+#menu li:first-child{
+	border-top: none;
+}
+#menu li:last-child{
+	border-bottom: 2px solid #ddd;
+}
+#menu li:not(.no_action){
+	cursor: pointer;
+}
+#menu li.active:not(.no_action) img{
+	top: -129px;
+}
+#menu li a,
+#menu li img,
+#master_header #config img,
+#master_header #config a{
+	position: absolute;
+	width: 300px;
+	height: auto;
+	z-index: 3;
+}
+#menu li a,
+#master_header #config a{
+	left:0;
+	top:0;
+	width: 100%;
+	height: 100%;
+	z-index: 5;
+}
+
+.env_icon{
+	position: relative;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	overflow: hidden;
+	top: 50%;
+	margin-top: -25px;
+	z-index: 3;
+}
+.env_icon img{
+	top: -6px;
+}
+
+#menu .menu_listas .env_icon img{ left: 0; }
+#menu .menu_historico .env_icon img{ left: -63px; }
+#menu .menu_produtos .env_icon img{ left: -126px; }
+#menu .menu_descontos .env_icon img{ left: -188px; }
+
+#menu .menu_logo{
+	background-image: url(../images/favicon.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 50px;
+}
+
+#master_content{
+	top: 84px;
+	left: 80px;
+	bottom: 0px;
+	right: 0px;
+	padding: 40px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+@media (min-width: 768px){
+	#master_header #config:hover{
+		background-color: #DCDCDC;
+	}
+	#menu li:not(.no_action):hover{
+		background-color: #eee;
+	}
+}
+
+@media (max-width: 767px){
+	#master_header{
+		text-align: center;
+		padding: 15px;
+		height: 60px;
+	}
+	#master_header h1{
+		font-size: 20px;
+	}
+	#master_header #config{
+		width: 60px;
+		height: 100%;
+		background-color: transparent;
+	}
+	#master_header #config img{
+		width: 230px;
+		top: -45px;
+		left: 5px;
+	}
+	#master_side{
+		width: 100%;
+		height: 80px;
+		top: unset;
+		bottom:0;
+	}
+	#master_side #menu .menu_logo{
+		display: none;
+	}
+	#master_side #menu{
+		white-space: nowrap;
+		font-size: 0;
+	}
+	#master_side #menu li{
+		width: 25%;
+		font-size: 14px;
+		margin: 0;
+		border:none;
+		letter-spacing: 0;
+		line-height: 0;
+	}
+	#master_content{
+		top: 64px;
+		left:0;
+		right:0;
+		bottom:80px;
+		padding: 30px;
+	}
+}
