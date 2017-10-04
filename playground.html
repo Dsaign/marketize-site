@@ -9,7 +9,7 @@
 <body>
 
     <div class="container">
-    
+
         <p>header</p><br />
 
         <hr />
@@ -27,21 +27,6 @@
         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-        <br />
-        
-        <!-- <div class="col col_darken text-center">
-            <p class="laranja bg_azul">1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. 1</p>
-            <p class="laranja_sec bg_verde">2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. 2</p>
-            <p class="amarelo bg_preto">3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. 3</p>
-            <p class="amarelo_sec bg_roxo_sec">4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. 4</p>
-            <p class="roxo bg_branco">5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. 5</p>
-            <p class="roxo_sec">6 Lorem ipsum dolor sit amet, consectetur adipisicing elit. 6</p>
-            <p class="roxo_claro bg_roxo">7 Lorem ipsum dolor sit amet, consectetur adipisicing elit. 7</p>
-            <p class="branco bg_amarelo_sec">8 Lorem ipsum dolor sit amet, consectetur adipisicing elit. 8</p>
-            <p class="azul bg_amarelo">9 Lorem ipsum dolor sit amet, consectetur adipisicing elit. 9</p>
-            <p class="preto bg_laranja_sec">10 Lorem ipsum dolor sit amet, consectetur adipisicing elit. 10</p>
-            <p class="verde bg_laranja">11 Lorem ipsum dolor sit amet, consectetur adipisicing elit. 11</p>
-        </div> -->
         <br />
 
         <div class="full">
@@ -75,12 +60,13 @@
 
         <button type="button" class="button btn-info"><span></span>Button Info</button>
         <button type="button" class="button btn-primary"><span></span>Button Primary</button>
-        <button type="button" class="button btn-danger"><span></span>Button Danger</button>
+        <button type="button" class="button btn-danger"><span></span>Button Danger</button><br />
         <button type="button" class="button btn-warning"><span></span>Button Warning</button>
         <button type="button" class="button btn-success"><span></span>Button Success</button>
+        <button type="button" class="button btn-alt"><span></span>Button Alternative</button>
 
         <br /><br />
-    
+
         <div class="control-group">
             <label class="control control-checkbox">
                 First checkbox
@@ -108,24 +94,30 @@
                 <div class="control_indicator"></div>
             </label>
         </div>
+        <br /><br />
 
-        <br /><br />
-        <input type="date" name="" value="">
-        <br /><br />
-        <input type="radio" id="rd1" name="rd" value="" placeholder="" checked>
-        <label for="rd1">Masculino</label>
+        <a href="">
+          <div class="box">
+              <p class="box-font">Box</p>
+          </div>
+        </a>
         <br />
-        <input type="radio" id="rd2" name="rd" value="" placeholder="">
-        <label for="rd2">Feminino</label>
-        <br /><br />
-        <select name="" class="cs-select cs-skin-elastic">
-            <option value="">Opção 1</option>
-            <option value="">Opção 2</option>
-            <option value="">Opção 3</option>
-            <option value="">Opção 4</option>
-        </select>
+
+        <div class="col inline_block v_low_spaced">
+            <div class="input-search">
+                <input type="search" name="" value="" class="line_effect" placeholder="Search input">
+                <img class="input-icon" src="images/input-icon-search.png">
+                <span class="focus-border"></span>
+            </div>
+        </div>
+
+        <div class="counter">
+          <button class="counter-btn counter-minus" onclick="counterTake()">-</button>
+          <input type="text" name="" value="" maxlength="2" class="counter-input" alt="" placeholder="0">
+          <button class="counter-btn counter-plus" onclick="counterAdd()">+</button>
+        </div>
 
     </div>
-
+    <script type="text/javascript" src="js/app-lists.js"></script>
 </body>
 </html>
