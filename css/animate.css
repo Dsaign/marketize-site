@@ -573,7 +573,11 @@
 @keyframes fadeInDown {
   from {
     opacity: 0;
+<<<<<<< HEAD
     transform: translate3d(0, -100%, 0);
+=======
+    transform: translate3d(0, -20%, 0);
+>>>>>>> igor
   }
 
   to {
@@ -589,7 +593,7 @@
 @keyframes fadeInDownBig {
   from {
     opacity: 0;
-    transform: translate3d(0, -2000px, 0);
+    transform: translate3d(0, -100%, 0);
   }
 
   to {
@@ -669,7 +673,11 @@
 @keyframes fadeInUp {
   from {
     opacity: 0;
+<<<<<<< HEAD
     transform: translate3d(0, 100%, 0);
+=======
+    transform: translate3d(0, 20%, 0);
+>>>>>>> igor
   }
 
   to {
@@ -685,7 +693,7 @@
 @keyframes fadeInUpBig {
   from {
     opacity: 0;
-    transform: translate3d(0, 2000px, 0);
+    transform: translate3d(0, 100%, 0);
   }
 
   to {
@@ -719,7 +727,11 @@
 
   to {
     opacity: 0;
+<<<<<<< HEAD
     transform: translate3d(0, 100%, 0);
+=======
+    transform: translate3d(0, 20%, 0);
+>>>>>>> igor
   }
 }
 
@@ -809,7 +821,11 @@
 
   to {
     opacity: 0;
+<<<<<<< HEAD
     transform: translate3d(0, -100%, 0);
+=======
+    transform: translate3d(0, -20%, 0);
+>>>>>>> igor
   }
 }
 
