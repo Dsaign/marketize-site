@@ -19,74 +19,45 @@
 </head>
 <body>
 
-      <div class="popup-black-overlay">
-        <div class="popup-content">
-          <div class="popup-wrap">
-
-            <img class="top_min_spaced" src="images/icon-logout.png" alt=""/>
-
-            <h3 class="roboto_regular v_low_spaced">Deseja sair?</h3>
-
-            <div class="v_lowest_spaced"></div>
-
-            <a href="">
-              <button class="v_medium_spaced button-app btn-primary" href="javascript:void(0)" onclick="popUpClose()"><span></span>Não</button>
-            </a>
-
-            <div class="v_lowest_spaced"></div>
-
-            <a class="btn-alt btn-large">Sim</a>
-          </div>
-        </div>
+      <div class="header">
+        <a href="#">
+          <p class="header-back">Voltar</p>
+        </a>
+        <p class="roboto_regular">Ajustes</p>
       </div>
 
       <div class="container_m">
-
-        <div class="header">
-          <a href="#">
-            <p class="header-back">Voltar</p>
-          </a>
-          <p class="roboto_regular">Ajustes</p>
-        </div>
-
-        <div class="menu-list">
 
           <div class="user-infos">
             <div class="user-icon">
               <img src="images\placeholder-icon.jpg">
             </div>
-            <h2 class="top_lowest_spaced roboto_regular user-name">Luizão Silva</h2>
+            <h2 class="top_lowest_spaced roboto_regular">Luizão Silva</h2>
           </div>
 
-          <div class="list-config">
-            <a href="#">
-              <div class="box-config">
-                  <p class=" box-font">Editar dados</p>
-              </div>
-            </a>
-          </div>
-          <div class="list-config">
-            <a href="#">
-              <div class="box-config">
-                  <p class=" box-font">Política de privacidade</p>
-              </div>
-            </a>
-          </div>
-          <div class="list-config">
-            <a href="#">
-              <div class="box-config">
-                  <p class=" box-font">Sobre</p>
-              </div>
-            </a>
-          </div>
-          <div class="list-config">
-            <a href="javascript:void(0)" onclick="popUp()">
-              <div class="box-config">
-                  <p class="box-font">Sair</p>
-              </div>
-            </a>
+          <div class="container-config">
+            <a href="#" class="box">Editar dados</a>
+            <a href="#" class="box">Política de privacidade</a>
+            <a href="#" class="box">Sobre</a>
+            <a href="#" class="box" onclick="popUp()">Sair</a>
           </div>
 
+      </div>
+
+      </div>
+
+      <div class="popup-black-overlay">
+        <div class="popup-content">
+          <div class="popup-wrap">
+            <img class="top_min_spaced" src="images/icon-logout.png" alt=""/>
+            <h3 class="roboto_regular v_low_spaced">Deseja sair?</h3>
+            <div class="v_lowest_spaced"></div>
+            <a href="">
+              <button class="v_medium_spaced button-app btn-primary" href="javascript:void(0)" onclick="popUpClose()"><span></span>Não</button>
+            </a>
+            <div class="v_lowest_spaced"></div>
+            <a class="btn-alt btn-large">Sim</a>
+          </div>
         </div>
       </div>
 
